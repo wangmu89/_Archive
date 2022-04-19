@@ -8,7 +8,7 @@ import java.sql.Connection;
  * @Author WangMu
  * @Create 2022-04-19
  */
-public class TsExample {
+public class TransactionScriptExample {
     /*
      * MYSQL数据库表和初始化: classpath:/sql/transaction_script.sql
      *  - products: 产品表
@@ -18,5 +18,11 @@ public class TsExample {
 
     public static void main(String[] args) {
         Connection conn = PoeaaConnection.getConnection();
+        Gateway gateway = new Gateway(conn);
+        RecognitionService recognitionService = new RecognitionService(gateway);
+
+        for(int contractId = 1 ; contractId <= 6; contractId++) {
+            recognitionService.calculateRevenueRecognitions(contractId);
+        }
     }
 }

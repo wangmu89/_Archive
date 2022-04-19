@@ -227,7 +227,7 @@ public final class Money implements Comparable<Money> {
         for(int i = 0; i < remainder; i++) {
             resMoneys[i] = highResMoney;
         }
-        for(int i = remainder; i < n - 1; i++) {
+        for(int i = remainder; i < n; i++) {
             resMoneys[i] = lowResMoney;
         }
         return resMoneys;

@@ -33,3 +33,13 @@ VALUES
 ('Word Process A', 'WP'), ('Word Process B', 'WP'),
 ('Mysql', 'DB'), ('Oracle', 'DB'),
 ('Excel A', 'XLS'), ('Excel B', 'XLS');
+
+-- 添加合同
+INSERT INTO contracts(product_id, revenue, signed_date)
+VALUES
+(1, 1999.99, '2022-01-10'),
+(2, 2888.00, '2022-01-20'),
+(3, 19999.66, '2022-02-14'),
+(4, 1888.00, '2022-02-24'),
+(5, 999.08, '2021-12-25'),
+(6, 288888.34, '2022-03-01')
